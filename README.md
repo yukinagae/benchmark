@@ -25,12 +25,14 @@ go build main.go
 ./main
 ```
 
-## Setting
+## Case 1
 
-- 1,00 users
-- about 30,00 requests
+### Setting
 
-## Results
+- 100 users
+- about 3,000 requests
+
+### Results
 
 - python
   - RPS: 66
@@ -40,3 +42,21 @@ go build main.go
   - RPS: 65
   - latency (90%ile): 5ms
   - failures: 0%
+
+## Case 2
+
+### Setting
+
+- 1,000 users
+- about 50,000 requests
+
+### Results
+
+- python
+  - RPS: 500
+  - latency (90%ile): 890ms
+  - failures: 6%
+- go
+  - RPS: 610
+  - latency (90%ile): 360ms
+  - failures: 1%
